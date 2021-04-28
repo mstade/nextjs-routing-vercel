@@ -5,8 +5,8 @@ module.exports = {
         // These rewrites are checked after both pages/public files
         // and dynamic routes are checked
         {
-          source: '/',
-          destination: '/api',
+          source: '/:path*',
+          destination: '/api/:path*/handler',
           has: [
             {
               type: 'header',
@@ -16,7 +16,7 @@ module.exports = {
           ],
         },
         {
-          source: '/:path*',
+          source: '/',
           destination: '/api',
           has: [
             {
@@ -31,12 +31,12 @@ module.exports = {
         // These rewrites are checked after both pages/public files
         // and dynamic routes are checked
         {
-          source: '/',
-          destination: '/'
-        },
-        {
           source: '/:path*',
           destination: '/',
+        },
+        {
+          source: '/',
+          destination: '/'
         },
       ],
     }

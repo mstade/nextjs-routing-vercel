@@ -2,5 +2,5 @@
 
 export default (req, res) => {
 	res.statusCode = 200
-  res.json({ url: req.url, query: req.query })
+  res.json({ url: req.url, query: req.query, handler: true })
 }
