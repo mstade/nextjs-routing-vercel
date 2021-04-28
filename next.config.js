@@ -6,7 +6,7 @@ module.exports = {
         // and dynamic routes are checked
         {
           source: '/',
-          destination: '/api/hello',
+          destination: '/api',
           has: [
             {
               type: 'header',
@@ -17,7 +17,7 @@ module.exports = {
         },
         {
           source: '/:path*',
-          destination: '/api/hello',
+          destination: '/api/:path*',
           has: [
             {
               type: 'header',
